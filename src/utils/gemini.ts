@@ -1,9 +1,11 @@
-
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-// Initialize the Generative AI API
-// You should replace this with your actual API key or use environment variables
-const API_KEY = "AIzaSyBjTaijw-TPw1CVxTHHK5KGL--dDPps8Wk";
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+
+if (!API_KEY) {
+  throw new Error('VITE_GEMINI_API_KEY is not set in environment variables');
+}
+
 const genAI = new GoogleGenerativeAI(API_KEY);
 
 interface ScamAnalysisResult {

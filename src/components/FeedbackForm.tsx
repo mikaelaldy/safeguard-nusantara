@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ThumbsUp, ThumbsDown, Star, Info, Check } from 'lucide-react';
@@ -14,6 +13,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { feedbackService } from '@/lib/feedback-service';
 
 interface FeedbackFormProps {
   scanId?: string;
@@ -38,9 +38,14 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({ scanId }) => {
     setIsSubmitting(true);
     
     try {
-      // Here you would typically send this data to your backend
-      // For now, we'll just simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const feedback = {
+        scan_id: scanId || '',
+        is_accurate: isAccurate || false,
+        rating,
+        comment,
+      };
+
+      await feedbackService.submit(feedback);
       
       // Log the feedback data (in a real app, you'd send this to a server)
       console.log({
