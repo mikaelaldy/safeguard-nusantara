@@ -1,69 +1,131 @@
-# Welcome to your Lovable project
 
-## Project info
+# SafeGuard Nusantara
 
-**URL**: https://lovable.dev/projects/3f1bfcd7-4c12-4fcc-a272-05576a91d26d
+A web-based scam detection tool to help Indonesian citizens identify and prevent potential scams through text analysis.
 
-## How can I edit this code?
+## Product Requirements Document (PRD)
 
-There are several ways of editing your application.
+### Overview
 
-**Use Lovable**
+SafeGuard Nusantara is a scam detection application that leverages Google's Gemini AI to analyze text and identify potential scams. It provides real-time analysis and feedback collection to continuously improve its detection capabilities.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3f1bfcd7-4c12-4fcc-a272-05576a91d26d) and start prompting.
+### Key Features
 
-Changes made via Lovable will be committed automatically to this repo.
+- 🔍 Real-time text analysis for scam detection
+- 🤖 AI-powered threat assessment using Google Gemini
+- 📊 Three-level threat classification (Aman, Mencurigakan, Berbahaya)
+- 💬 Detailed explanation for each analysis
+- ⭐ User feedback system
+- 📱 Mobile-responsive design
 
-**Use your preferred IDE**
+### Target Users
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Indonesian citizens
+- Anyone who wants to verify suspicious messages
+- People who want to learn about common scam patterns
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Technical Stack
 
-Follow these steps:
+- **Frontend**: React + TypeScript
+- **Build Tool**: Vite
+- **UI Framework**: Tailwind CSS + shadcn/ui
+- **AI/ML**: Google Gemini API
+- **Database**: Supabase
+- **Deployment**: Vercel
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Getting Started
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Prerequisites
 
-# Step 3: Install the necessary dependencies.
-npm i
+- Node.js 18+ (LTS recommended)
+- npm or yarn
+- Git
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/safeguard-nusantara.git
+cd safeguard-nusantara
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Set up environment variables
+
+```bash
+cp .env.example .env
+```
+
+Add your API keys to the `.env` file:
+
+```plaintext
+VITE_SUPABASE_URL="your_supabase_url"
+VITE_SUPABASE_ANON_KEY="your_supabase_key"
+VITE_GEMINI_API_KEY="your_gemini_api_key"
+```
+
+4. Start development server
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Building for Production
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run build
+```
 
-**Use GitHub Codespaces**
+## Deployment
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The application is deployed at [safeguard.mikascend.xyz](https://safeguard.mikascend.xyz)
 
-## What technologies are used for this project?
+### Manual Deployment Steps
 
-This project is built with .
+1. Build the project
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```bash
+npm run build
+```
 
-## How can I deploy this project?
+2. Install Vercel CLI
 
-Simply open [Lovable](https://lovable.dev/projects/3f1bfcd7-4c12-4fcc-a272-05576a91d26d) and click on Share -> Publish.
+```bash
+npm install -g vercel
+```
 
-## I want to use a custom domain - is that possible?
+3. Deploy
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+```bash
+vercel
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## Security
+
+- All API keys are stored in environment variables
+- Rate limiting is implemented for API endpoints
+- Input sanitization is in place for all user inputs
+- CORS policies are properly configured
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details
+
+## Contact
+
+Your Name - [@yourusername](https://twitter.com/yourusername)
+Project Link: [https://github.com/yourusername/safeguard-nusantara](https://github.com/yourusername/safeguard-nusantara)
