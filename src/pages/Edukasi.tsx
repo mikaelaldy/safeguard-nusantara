@@ -56,7 +56,7 @@ const scamTypes: ScamType[] = [
     title: "Penipuan Telepon",
     description: "Panggilan telepon di mana penipu mengaku sebagai pihak resmi dan mencoba menipu Anda.",
     examples: [
-      "Panggilan dari 'dukungan teknis' palsu",
+      "Panggilan dari 'instansi pemerintah' palsu",
       "Telepon dari 'bank' tentang masalah akun",
       "Panggilan tentang 'kerabat yang mengalami kecelakaan'"
     ]
