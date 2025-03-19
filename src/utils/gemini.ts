@@ -3,7 +3,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Initialize the Generative AI API
 // You should replace this with your actual API key or use environment variables
-const API_KEY = "YOUR_GEMINI_API_KEY";
+const API_KEY = "AIzaSyBjTaijw-TPw1CVxTHHK5KGL--dDPps8Wk";
 const genAI = new GoogleGenerativeAI(API_KEY);
 
 interface ScamAnalysisResult {
@@ -17,7 +17,7 @@ export async function analyzeText(text: string): Promise<ScamAnalysisResult> {
     const trimmedText = text.trim().slice(0, 1000);
     
     // Get the text generation model
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
     
     // Craft the prompt for scam detection
     const prompt = `

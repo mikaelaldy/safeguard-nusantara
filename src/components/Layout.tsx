@@ -51,7 +51,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               </ul>
             </nav>
             <a 
-              href="https://mikascend.xyz" 
+              href="https://x.com/mikascend" 
               target="_blank" 
               rel="noopener noreferrer"
               className="block"
@@ -61,7 +61,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 className="w-10 h-10 rounded-full overflow-hidden border-2 border-blue-500 shadow-md"
               >
                 <img 
-                  src="/lovable-uploads/bbfe987f-5d44-4300-8f59-ed3024d4ece1.png" 
+                  src="/assets/owl.png" 
                   alt="Owl Logo" 
                   className="w-full h-full object-cover"
                 />
