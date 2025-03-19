@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Shield } from 'lucide-react';
+import { Shield, Twitter } from 'lucide-react';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -86,6 +86,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="container mx-auto px-6 md:px-8 text-center text-gray-500 text-sm">
           <p>© {new Date().getFullYear()} Safeguard Nusantara. Semua hak dilindungi.</p>
           <p className="mt-1">Melindungi masyarakat Indonesia dari penipuan online.</p>
+          <div className="flex items-center justify-center mt-3 space-x-4">
+            <a 
+              href="https://twitter.com/mikascend" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-500 hover:text-blue-500 transition-colors flex items-center"
+            >
+              <Twitter size={16} className="mr-1" />
+              <span>@mikascend</span>
+            </a>
+          </div>
         </div>
       </footer>
     </div>
