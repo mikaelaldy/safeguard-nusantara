@@ -13,7 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-blue-50 to-white">
       <header className="w-full py-4 px-6 md:px-8 border-b border-gray-100 bg-white/80 backdrop-blur-md fixed top-0 z-50">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <Link to="/" className="flex items-center space-x-2 group">
+          <Link to="/landing" className="flex items-center space-x-2 group">
             <motion.div
               initial={{ scale: 1 }}
               whileHover={{ scale: 1.05 }}
@@ -29,26 +29,45 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               Safeguard Nusantara
             </motion.div>
           </Link>
-          <nav>
-            <ul className="flex space-x-6 font-medium text-sm">
-              <li>
-                <Link 
-                  to="/" 
-                  className="text-gray-600 hover:text-blue-600 transition-colors py-2 border-b-2 border-transparent hover:border-blue-500"
-                >
-                  Periksa
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/edukasi" 
-                  className="text-gray-600 hover:text-blue-600 transition-colors py-2 border-b-2 border-transparent hover:border-blue-500"
-                >
-                  Edukasi
-                </Link>
-              </li>
-            </ul>
-          </nav>
+          <div className="flex items-center space-x-6">
+            <nav>
+              <ul className="flex space-x-6 font-medium text-sm">
+                <li>
+                  <Link 
+                    to="/" 
+                    className="text-gray-600 hover:text-blue-600 transition-colors py-2 border-b-2 border-transparent hover:border-blue-500"
+                  >
+                    Periksa
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/edukasi" 
+                    className="text-gray-600 hover:text-blue-600 transition-colors py-2 border-b-2 border-transparent hover:border-blue-500"
+                  >
+                    Edukasi
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+            <a 
+              href="https://mikascend.xyz" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="w-10 h-10 rounded-full overflow-hidden border-2 border-blue-500 shadow-md"
+              >
+                <img 
+                  src="/lovable-uploads/bbfe987f-5d44-4300-8f59-ed3024d4ece1.png" 
+                  alt="Owl Logo" 
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+            </a>
+          </div>
         </div>
       </header>
       
