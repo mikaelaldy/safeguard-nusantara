@@ -1,4 +1,3 @@
-
 # SafeGuard Nusantara
 
 A web-based scam detection tool to help Indonesian citizens identify and prevent potential scams through text analysis.
@@ -114,18 +113,10 @@ vercel
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## Security
-
-- All API keys are stored in environment variables
-- Rate limiting is implemented for API endpoints
-- Input sanitization is in place for all user inputs
-- CORS policies are properly configured
-
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details
 
 ## Contact
 
-Your Name - [@yourusername](https://twitter.com/yourusername)
-Project Link: [https://github.com/yourusername/safeguard-nusantara](https://github.com/yourusername/safeguard-nusantara)
+Twitter/X - [@mikascend](https://twitter.com/mikascend)
